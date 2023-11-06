@@ -58,8 +58,10 @@ const produtoAcademiaSchema = new mongoose.Schema({
     data_fabricacao: {type : Date},
     quantidade_estoque: {type : Number},
   });
+
+  const ProdutoAcademia = mongoose.model('ProdutoAcademia', produtoAcademiaSchema);
   
-  app.post("/cadastrarProdutoAcademia", async (req, res) => {
+app.post("/cadastrarProdutoAcademia", async (req, res) => {
     const id_produtoacademia = req.body.id_produtoacademia;
     const descricao = req.body.descricao;
     const marca = req.body.marca;
