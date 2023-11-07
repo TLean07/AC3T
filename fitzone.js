@@ -48,7 +48,7 @@ app.post("/cadastrarUsuario", async (req, res) => {
 });
 
 app.get("/cadastrarUsuario", async(req, res)=>{
-    res.sendFile(__dirname +"/cadastrarUsuario.html");
+    res.sendFile(__dirname +"/form-user.html");
 });
 
 const produtoAcademiaSchema = new mongoose.Schema({
@@ -94,13 +94,13 @@ app.post("/cadastrarProdutoAcademia", async (req, res) => {
 });
 
 app.get("/cadastrarProdutoAcademia", async(req, res)=>{
-    res.sendFile(__dirname +"/cadastrarProdutoAcademia.html");
+    res.sendFile(__dirname +"/form-fitzone.html");
 });
 
 app.get("/", async(req, res)=>{
-    res.sendFile(__dirname +"/index.html");
+    res.sendFile(__dirname +"/form-fitzone.html");
 });
 
 app.listen(port, ()=>{
     console.log(`Servidor rodando na porta ${port}`);
-})
+})  
