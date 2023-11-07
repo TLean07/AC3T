@@ -72,6 +72,10 @@ app.post("/cadastrarProdutoAcademia", async (req, res) => {
         return res.status(400).json({ error: "Preencher todos os campos" });
     }
 
+    if (quantidade_estoque <= 0 || quantidade_estoque > 26) {
+        return res.status(400).json({ error: "A quantidade em estoque deve ser um valor menor ou igual a 26." });
+    }
+
     const id_produtoacademiaExiste = await ProdutoAcademia.findOne({ id_produtoacademia: id_produtoacademia });
     if (id_produtoacademiaExiste) {
         return res.status(400).json({ error: "O produto já existe!!!" });
