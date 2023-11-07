@@ -101,7 +101,7 @@ app.get("/cadastrarProdutoAcademia", async(req, res)=>{
     res.sendFile(__dirname +"/form-fitzone.html");
 });
 
-app.get("/index", async(req, res)=>{
+app.get("/", async(req, res)=>{
     res.sendFile(__dirname +"/index.html");
 });
 
